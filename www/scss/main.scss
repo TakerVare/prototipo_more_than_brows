@@ -1,0 +1,22 @@
+// ==============================================
+// Main SCSS - More than brows
+// Proyecto: Prototipo web con Mobile First
+// ==============================================
+
+// 1. Importar variables primero
+@import 'variables';
+
+// 2. Reset y normalización
+@import 'reset';
+
+// 3. Estilos base
+@import 'base';
+
+// 4. Componentes reutilizables
+@import 'components';
+
+// 5. Layout (Mobile First)
+@import 'layout';
+
+// 6. Responsive (Desktop)
+@import 'responsive';

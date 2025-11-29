@@ -1,0 +1,21 @@
+{
+  "name": "prototipo_more_than_brows",
+  "version": "1.0.0",
+  "description": "Repositorio para crear los prototipos de la web prototipo_more_than_brows",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass www/scss/main.scss www/css/styles.css",
+    "sass:watch": "sass --watch www/scss/main.scss:www/css/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:30406/git/TakerVare/prototipo_more_than_brows"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.94.2"
+  }
+}

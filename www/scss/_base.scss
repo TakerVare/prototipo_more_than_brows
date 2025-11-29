@@ -1,0 +1,58 @@
+// ==============================================
+// Estilos base
+// ==============================================
+
+body {
+    font-family: $font-family-principal;
+    font-size: $font-size-base;
+    line-height: 1.6;
+    color: $negro;
+    background-color: $blanco;
+}
+
+// Tipografía
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-weight-regular;
+    line-height: 1.2;
+    margin-bottom: $espaciado-sm;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-light;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-regular;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-medium;
+}
+
+h4 {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-semibold;
+}
+
+p {
+    margin-bottom: $espaciado-sm;
+}
+
+// Clase de página
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Contenedor genérico
+.container {
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $espaciado-md;
+}

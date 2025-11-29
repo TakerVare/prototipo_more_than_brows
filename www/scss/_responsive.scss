@@ -1,0 +1,117 @@
+// ==============================================
+// Responsive - Desktop
+// Mobile First approach: estos estilos se aplican DESPUÉS de mobile
+// ==============================================
+
+// Tablet (768px y mayor)
+@media (min-width: $breakpoint-tablet) {
+    // Hero
+    .hero {
+        min-height: 70vh;
+        padding: $espaciado-xxl * 1.5 $espaciado-lg;
+    }
+
+    // Servicios en grid
+    .services {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: $espaciado-lg;
+        }
+
+        &__title {
+            grid-column: 1 / -1;
+        }
+    }
+
+    // Footer en grid
+    .footer {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: $espaciado-xl;
+        }
+    }
+}
+
+// Desktop (1024px y mayor)
+@media (min-width: $breakpoint-desktop) {
+    // Navegación horizontal
+    .nav {
+        justify-content: flex-start;
+
+        &__logo {
+            max-width: 300px;
+        }
+    }
+
+    // Hero más grande
+    .hero {
+        min-height: 80vh;
+        padding: $espaciado-xxl * 2 $espaciado-xl;
+
+        &__title {
+            font-size: 56px;
+        }
+    }
+
+    // Servicios en 3 columnas
+    .services {
+        padding: $espaciado-xxl * 1.5 $espaciado-xl;
+
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__title {
+            font-size: 42px;
+        }
+    }
+
+    // Service cards más compactas
+    .service-card {
+        padding: $espaciado-xl;
+
+        &__title {
+            font-size: 22px;
+        }
+    }
+
+    // CTA
+    .cta {
+        padding: $espaciado-xxl * 1.5 $espaciado-xl;
+
+        &__title {
+            font-size: 42px;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+    }
+
+    // Footer en 3 columnas
+    .footer {
+        &__container {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+}
+
+// Desktop large (1200px y mayor)
+@media (min-width: $breakpoint-desktop-lg) {
+    // Contenedores más anchos
+    .header__container,
+    .services__container,
+    .cta__container,
+    .footer__container {
+        padding: 0 $espaciado-xl;
+    }
+
+    // Hero aún más grande
+    .hero {
+        &__title {
+            font-size: 64px;
+        }
+    }
+}

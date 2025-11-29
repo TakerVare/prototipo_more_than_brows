@@ -1,0 +1,188 @@
+// ==============================================
+// Layout - Mobile First
+// ==============================================
+
+// Header - BEM
+.header {
+    background: $blanco;
+    border-bottom: 1px solid $gris-medio;
+    padding: $espaciado-md 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__container {
+        max-width: $container-max-width;
+        margin: 0 auto;
+        padding: 0 $espaciado-md;
+    }
+}
+
+// Navegación - BEM
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+        max-width: 200px;
+
+        // Mobile first
+        @media (min-width: $breakpoint-tablet) {
+            max-width: 250px;
+        }
+    }
+
+    &__logo-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+// Main - BEM
+.main {
+    flex: 1;
+}
+
+// Hero - BEM
+.hero {
+    position: relative;
+    padding: $espaciado-xxl $espaciado-md;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../resources/Fondo_BackGround_pagina_inicial.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // Overlay para mejorar legibilidad
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 1;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 32px;
+        color: $negro;
+        margin-bottom: $espaciado-xl;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+        // Tablet y mayor
+        @media (min-width: $breakpoint-tablet) {
+            font-size: $font-size-h1;
+        }
+    }
+}
+
+// Servicios - BEM
+.services {
+    padding: $espaciado-xxl $espaciado-md;
+    background: $gris-claro;
+
+    &__container {
+        max-width: $container-max-width;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        color: $rosa-principal;
+        margin-bottom: $espaciado-xl;
+        font-size: $font-size-h2;
+        border-bottom: 2px solid $rosa-secundario;
+        padding-bottom: $espaciado-sm;
+    }
+}
+
+// CTA - BEM
+.cta {
+    background: linear-gradient(135deg, $rosa-principal 0%, $rosa-secundario 100%);
+    color: $blanco;
+    padding: $espaciado-xxl $espaciado-md;
+    text-align: center;
+
+    &__container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: $blanco;
+        margin-bottom: $espaciado-md;
+    }
+
+    &__text {
+        margin-bottom: $espaciado-lg;
+        font-size: 18px;
+        opacity: 0.95;
+    }
+}
+
+// Footer - BEM
+.footer {
+    background: $negro;
+    color: $blanco;
+    padding: $espaciado-xl $espaciado-md $espaciado-md;
+
+    &__container {
+        max-width: $container-max-width;
+        margin: 0 auto;
+        margin-bottom: $espaciado-lg;
+    }
+
+    &__info {
+        margin-bottom: $espaciado-lg;
+    }
+
+    &__title {
+        color: $rosa-principal;
+        font-size: $font-size-h3;
+        margin-bottom: $espaciado-sm;
+    }
+
+    &__subtitle {
+        color: $rosa-acento;
+        font-size: $font-size-h4;
+        margin-bottom: $espaciado-sm;
+    }
+
+    &__text {
+        color: $gris-claro;
+        margin-bottom: $espaciado-xs;
+    }
+
+    &__address {
+        font-style: normal;
+    }
+
+    &__contact {
+        margin-bottom: $espaciado-lg;
+    }
+
+    &__bottom {
+        border-top: 1px solid $gris-oscuro;
+        padding-top: $espaciado-md;
+        text-align: center;
+    }
+
+    &__copyright {
+        color: $gris-medio;
+        font-size: $font-size-small;
+    }
+}
