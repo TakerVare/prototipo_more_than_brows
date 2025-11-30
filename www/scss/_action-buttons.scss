@@ -1,0 +1,59 @@
+// Componente Action Buttons (Botones de acción superiores) con BEM
+@use 'variables' as *;
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $espaciado-sm;
+    padding: $espaciado-sm;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: $espaciado-md;
+        gap: $espaciado-md;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: $espaciado-lg;
+    }
+
+    .button {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $espaciado-xs;
+        padding: $espaciado-sm $espaciado-md;
+        min-height: 44px;
+        border-radius: $border-radius;
+        text-decoration: none;
+        font-size: $font-size-body;
+        font-weight: $font-weight-medium;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding: $espaciado-md $espaciado-lg;
+            font-size: $font-size-h4;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+
+            @media (min-width: $breakpoint-tablet) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &__text {
+            line-height: 1;
+        }
+
+        // Focus visible para accesibilidad
+        &:focus-visible {
+            outline: 3px solid $rosa-principal;
+            outline-offset: 2px;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+// Componente Page Header (Header de páginas internas) con BEM
+@use 'variables' as *;
+
+.page-header {
+    background-color: $rosa-principal;
+    padding: $espaciado-md 0;
+    width: 100%;
+
+    // Container
+    &__container {
+        max-width: 393px;
+        margin: 0 auto;
+        padding: 0 $espaciado-sm;
+    }
+
+    // Title
+    &__title {
+        font-family: $font-family;
+        font-size: 24px;
+        font-weight: $font-weight-normal;
+        line-height: 1.2;
+        color: $negro;
+        margin: 0;
+        text-align: center;
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        padding: $espaciado-lg 0;
+
+        &__container {
+            max-width: 768px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        &__container {
+            max-width: 1024px;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+// Estilos base y reset
+@use 'variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: $font-family;
+    line-height: $line-height;
+    color: $negro;
+    background-color: $blanco;
+}
+
+// Page container
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Main content
+.main {
+    flex: 1;
+}
+
+// Imágenes responsive
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Links
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Listas
+ul {
+    list-style: none;
+}

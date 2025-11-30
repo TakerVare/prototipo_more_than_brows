@@ -1,0 +1,94 @@
+// Componente Search Bar (Barra de búsqueda) con BEM
+@use 'variables' as *;
+
+.search-bar {
+    padding: $espaciado-sm;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: $espaciado-md;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: $espaciado-lg;
+    }
+
+    &__form {
+        width: 100%;
+    }
+
+    &__input-group {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: $gris-claro;
+        border: 1px solid $gris-medio;
+        border-radius: $border-radius;
+        padding: $espaciado-xs $espaciado-sm;
+        transition: $transicion;
+
+        &:focus-within {
+            border-color: $rosa-principal;
+            box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2);
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            padding: $espaciado-sm $espaciado-md;
+        }
+    }
+
+    &__icon--search {
+        width: 20px;
+        height: 20px;
+        stroke: $gris-oscuro;
+        flex-shrink: 0;
+        margin-right: $espaciado-xs;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        font-family: $font-family;
+        font-size: $font-size-body;
+        color: $negro;
+        padding: $espaciado-xs 0;
+        min-height: 28px;
+
+        &::placeholder {
+            color: $gris-oscuro;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: $font-size-h4;
+            min-height: 32px;
+        }
+    }
+
+    &__icon--mic {
+        width: 20px;
+        height: 20px;
+        fill: $gris-oscuro;
+        flex-shrink: 0;
+        margin-left: $espaciado-xs;
+        cursor: pointer;
+        transition: $transicion;
+
+        &:hover {
+            fill: $rosa-acento;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

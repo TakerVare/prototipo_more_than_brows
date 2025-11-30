@@ -1,0 +1,172 @@
+{
+  "appointments": [
+    {
+      "date": "2025-01-15",
+      "time": "10:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-15",
+      "time": "10:45",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-15",
+      "time": "11:30",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-15",
+      "time": "10:00",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-15",
+      "time": "11:30",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-15",
+      "time": "15:00",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-20",
+      "time": "10:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-20",
+      "time": "10:45",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-20",
+      "time": "16:00",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-22",
+      "time": "10:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-22",
+      "time": "11:30",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-22",
+      "time": "15:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-22",
+      "time": "10:00",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-22",
+      "time": "11:30",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-25",
+      "time": "10:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-25",
+      "time": "15:00",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-25",
+      "time": "16:00",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-28",
+      "time": "10:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-28",
+      "time": "10:45",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-28",
+      "time": "11:30",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-28",
+      "time": "15:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-28",
+      "time": "10:00",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-01-28",
+      "time": "11:30",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-02-05",
+      "time": "10:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-02-05",
+      "time": "10:45",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-02-05",
+      "time": "15:00",
+      "professional": "Brenda",
+      "status": "available"
+    },
+    {
+      "date": "2025-02-12",
+      "time": "10:00",
+      "professional": "Sofia",
+      "status": "available"
+    },
+    {
+      "date": "2025-02-12",
+      "time": "16:00",
+      "professional": "Brenda",
+      "status": "available"
+    }
+  ]
+}

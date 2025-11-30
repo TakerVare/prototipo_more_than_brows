@@ -1,0 +1,48 @@
+// Variables basadas en la guía de estilos More than brows
+
+// Colores principales
+$rosa-principal: #FFB6C1;
+$rosa-secundario: #FFE4E1;
+$rosa-acento: #FFC0CB;
+$negro: #1A1A1A;
+$blanco: #FFFFFF;
+$gris-claro: #F5F5F5;
+$gris-medio: #E0E0E0;
+$gris-oscuro: #666666;
+
+// Espaciado
+$espaciado-xs: 8px;
+$espaciado-sm: 16px;
+$espaciado-md: 24px;
+$espaciado-lg: 32px;
+$espaciado-xl: 48px;
+$espaciado-xxl: 64px;
+
+// Border radius
+$border-radius: 0px;
+
+// Transiciones
+$transicion: all 0.3s ease;
+
+// Tipografía
+$font-family: 'Georgia', 'Times New Roman', serif;
+$line-height: 1.6;
+
+// Jerarquía tipográfica
+$font-size-h1: 48px;
+$font-size-h2: 36px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-body: 16px;
+$font-size-small: 14px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1200px;

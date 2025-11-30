@@ -1,0 +1,68 @@
+// Componente User Action (Botones de acción de usuario) con BEM
+@use 'variables' as *;
+
+.user-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: $espaciado-xs;
+    background-color: transparent;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: $transicion;
+
+    @media (min-width: $breakpoint-tablet) {
+        min-width: 48px;
+        min-height: 48px;
+        padding: $espaciado-sm;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        stroke: $rosa-principal;
+        transition: $transicion;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    // Hover state
+    &:hover {
+        background-color: $rosa-secundario;
+
+        svg {
+            stroke: $rosa-acento;
+        }
+    }
+
+    // Focus visible para accesibilidad
+    &:focus-visible {
+        outline: 3px solid $rosa-principal;
+        outline-offset: 2px;
+    }
+
+    // Active state
+    &:active {
+        background-color: $rosa-acento;
+
+        svg {
+            stroke: $blanco;
+        }
+    }
+
+
+    // Soporte para motion reducido
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        svg {
+            transition: none;
+        }
+    }
+}

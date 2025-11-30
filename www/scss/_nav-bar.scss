@@ -1,0 +1,109 @@
+// Componente Navigation Bar con BEM
+@use 'variables' as *;
+
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $gris-claro;
+    border-top: 1px solid $gris-medio;
+    z-index: 100;
+
+    // List
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 72px;
+        max-width: 393px;
+        margin: 0 auto;
+    }
+
+    // Item
+    &__item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // Modificador active
+        &--active {
+            .nav-bar__icon {
+                color: $rosa-principal;
+                stroke: $rosa-principal;
+            }
+        }
+    }
+
+    // Link
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $espaciado-sm;
+        transition: $transicion;
+        cursor: pointer;
+
+        &:hover {
+            .nav-bar__icon {
+                color: $rosa-acento;
+                stroke: $rosa-acento;
+                transform: scale(1.1);
+            }
+        }
+
+        &:active {
+            .nav-bar__icon {
+                transform: scale(0.95);
+            }
+        }
+    }
+
+    // Icon
+    &__icon {
+        width: 24px;
+        height: 24px;
+        color: $rosa-principal;
+        stroke: $rosa-principal;
+        stroke-width: 1.5;
+        fill: none;
+        transition: $transicion;
+    }
+
+    // Tablet y Desktop
+    @media (min-width: $breakpoint-tablet) {
+        position: relative;
+        border-top: none;
+        border-bottom: 1px solid $gris-medio;
+        background-color: $blanco;
+
+        &__list {
+            height: 80px;
+            max-width: 100%;
+            justify-content: center;
+            gap: $espaciado-xxl;
+        }
+
+        &__item {
+            flex: 0 0 auto;
+        }
+
+        &__icon {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        &__list {
+            height: 90px;
+            gap: $espaciado-xxl * 1.5;
+        }
+
+        &__icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+// Componente Back Button (Botón de volver) con BEM
+@use 'variables' as *;
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: $espaciado-xs;
+    padding: $espaciado-xs $espaciado-sm;
+    background-color: transparent;
+    border: 2px solid $rosa-principal;
+    border-radius: $border-radius;
+    color: $rosa-principal;
+    font-family: $font-family;
+    font-size: $font-size-body;
+    font-weight: $font-weight-normal;
+    text-decoration: none;
+    transition: $transicion;
+    cursor: pointer;
+
+    // Icon
+    &__icon {
+        width: 20px;
+        height: 20px;
+        stroke: currentColor;
+    }
+
+    // Text
+    &__text {
+        line-height: 1;
+    }
+
+    // Hover state
+    &:hover {
+        background-color: $rosa-principal;
+        color: $blanco;
+        transform: translateX(-4px);
+    }
+
+    // Focus state
+    &:focus-visible {
+        outline: 3px solid $rosa-principal;
+        outline-offset: 2px;
+    }
+
+    // Active state
+    &:active {
+        transform: translateX(-2px) scale(0.98);
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        font-size: $font-size-h4;
+        padding: 10px $espaciado-md;
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        font-size: $espaciado-md;
+    }
+}

@@ -1,0 +1,205 @@
+// Componente Contact (Página de contacto) con BEM
+@use 'variables' as *;
+
+.contact {
+    min-height: calc(100vh - 170px - 100px); // Viewport menos header y nav
+    padding: 0;
+    background-color: $blanco;
+
+    // Container
+    &__container {
+        width: 100%;
+        max-width: 393px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: $espaciado-lg;
+    }
+
+    // Map Section
+    &__map {
+        width: 100%;
+    }
+
+    // Hours Section
+    &__hours {
+        padding: 0 $espaciado-md;
+    }
+
+    // Info Section
+    &__info {
+        padding: 0 $espaciado-md $espaciado-lg;
+    }
+
+    // Title
+    &__title {
+        font-family: $font-family;
+        font-size: 32px;
+        font-weight: $font-weight-normal;
+        line-height: 1.2;
+        color: $negro;
+        margin-bottom: $espaciado-md;
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        min-height: calc(100vh - 200px - 120px);
+
+        &__container {
+            max-width: 600px;
+            gap: $espaciado-xl;
+        }
+
+        &__hours,
+        &__info {
+            padding: 0 $espaciado-lg;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        min-height: calc(100vh - 220px - 120px);
+
+        &__container {
+            max-width: 800px;
+        }
+
+        &__title {
+            font-size: 40px;
+        }
+    }
+}
+
+// Schedule (Horario)
+.schedule {
+    font-family: $font-family;
+    color: $negro;
+
+    &__day {
+        font-size: $font-size-body;
+        font-weight: $font-weight-normal;
+        line-height: 1.4;
+        margin-bottom: $espaciado-xs;
+
+        strong {
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    &__times {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    &__time {
+        font-size: $font-size-body;
+        line-height: 1.6;
+        padding-left: $espaciado-xxl;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: $espaciado-lg;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: $rosa-principal;
+            border-radius: 50%;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        &__day,
+        &__time {
+            font-size: 18px;
+        }
+    }
+}
+
+// Contact List
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-md;
+
+    &__item {
+        display: flex;
+    }
+}
+
+// Contact Link
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: $espaciado-md;
+    font-family: $font-family;
+    color: $negro;
+    text-decoration: none;
+    transition: $transicion;
+    padding: $espaciado-sm;
+    margin-left: -$espaciado-sm;
+    border-radius: 4px;
+    width: 100%;
+
+    &:hover {
+        color: $rosa-principal;
+        background-color: rgba($rosa-secundario, 0.5);
+    }
+
+    &:focus-visible {
+        outline: 3px solid $rosa-principal;
+        outline-offset: 2px;
+    }
+
+    // Icon
+    &__icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        color: $negro;
+        stroke: currentColor;
+        stroke-width: 1.5;
+        fill: none;
+        transition: $transicion;
+    }
+
+    &:hover &__icon {
+        color: $rosa-principal;
+        transform: scale(1.1);
+    }
+
+    // Text
+    &__text {
+        font-size: 20px;
+        font-weight: $font-weight-normal;
+        line-height: 1.2;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        gap: $espaciado-lg;
+        padding: $espaciado-md;
+        margin-left: -$espaciado-md;
+
+        &__icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+        }
+
+        &__text {
+            font-size: 24px;
+        }
+    }
+}

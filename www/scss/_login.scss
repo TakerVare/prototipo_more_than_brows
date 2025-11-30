@@ -1,0 +1,37 @@
+// Componente Login con BEM
+@use 'variables' as *;
+
+.login {
+    min-height: calc(100vh - 170px - 100px); // Viewport menos header y nav
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $espaciado-lg $espaciado-sm;
+    background-color: $blanco;
+
+    // Container
+    &__container {
+        width: 100%;
+        max-width: 393px;
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        min-height: calc(100vh - 200px - 120px);
+        padding: $espaciado-xl $espaciado-lg;
+
+        &__container {
+            max-width: 500px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        min-height: calc(100vh - 220px - 120px);
+        padding: $espaciado-xxl $espaciado-xl;
+
+        &__container {
+            max-width: 600px;
+        }
+    }
+}

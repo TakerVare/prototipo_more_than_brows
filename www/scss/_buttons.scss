@@ -1,0 +1,67 @@
+// Componente Button con BEM
+@use 'variables' as *;
+
+.button {
+    padding: $espaciado-sm $espaciado-lg;
+    border: none;
+    font-family: $font-family;
+    font-size: $font-size-body;
+    cursor: pointer;
+    transition: $transicion;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    text-align: center;
+    width: 100%;
+
+    // Modificador primary
+    &--primary {
+        background-color: $rosa-principal;
+        color: $blanco;
+        border: 1px solid $rosa-principal;
+
+        &:hover {
+            background-color: $rosa-acento;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    // Modificador secondary
+    &--secondary {
+        background-color: transparent;
+        color: $rosa-principal;
+        border: 2px solid $rosa-principal;
+
+        &:hover {
+            background-color: $rosa-principal;
+            color: $blanco;
+        }
+    }
+
+    // Modificador full-width
+    &--full-width {
+        width: 100%;
+        display: block;
+    }
+
+    // Estado disabled
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 18px;
+        padding: $espaciado-md $espaciado-xl;
+    }
+}

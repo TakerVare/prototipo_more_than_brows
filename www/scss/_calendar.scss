@@ -1,0 +1,223 @@
+// Componente Calendar (Calendario de selección de fecha) con BEM
+@use 'variables' as *;
+
+.calendar {
+    background-color: $blanco;
+    padding: $espaciado-md $espaciado-sm;
+    margin: 0 auto;
+    max-width: 393px;
+
+    // Header del calendario (navegación de mes)
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $espaciado-md;
+        padding: 0 $espaciado-sm;
+    }
+
+    // Título del mes
+    &__month {
+        font-family: $font-family;
+        font-size: $espaciado-md;
+        font-weight: $font-weight-normal;
+        color: $negro;
+        margin: 0;
+        flex: 1;
+        text-align: center;
+
+        time {
+            display: block;
+        }
+    }
+
+    // Botones de navegación (anterior/siguiente)
+    &__nav {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid $rosa-principal;
+        border-radius: 0;
+        color: $rosa-principal;
+        cursor: pointer;
+        transition: $transicion;
+        padding: 0;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+        }
+
+        &:hover {
+            background-color: $rosa-principal;
+            color: $blanco;
+        }
+
+        &:focus-visible {
+            outline: 3px solid $rosa-principal;
+            outline-offset: 2px;
+        }
+    }
+
+    // Grid del calendario
+    &__grid {
+        width: 100%;
+    }
+
+    // Días de la semana (encabezado)
+    &__weekdays {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 4px;
+        margin-bottom: $espaciado-sm;
+    }
+
+    &__weekday {
+        font-family: $font-family;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        color: $gris-medio;
+        text-align: center;
+        padding: $espaciado-xs 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    // Contenedor de días
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 4px;
+    }
+
+    // Botón de día individual
+    &__day {
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-family;
+        font-size: $font-size-small;
+        font-weight: $font-weight-normal;
+        color: $negro;
+        background-color: $blanco;
+        border: 1px solid $gris-claro;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: $transicion;
+        padding: 0;
+        min-height: 44px;
+
+        &:hover:not(&--empty):not(&--selected) {
+            background-color: $rosa-secundario;
+            border-color: $rosa-principal;
+        }
+
+        &:focus-visible {
+            outline: 3px solid $rosa-principal;
+            outline-offset: 2px;
+            z-index: 1;
+        }
+
+        // Día vacío (relleno del calendario)
+        &--empty {
+            background-color: transparent;
+            border: none;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        // Día seleccionado
+        &--selected {
+            background-color: $rosa-principal;
+            color: $negro;
+            border-color: $rosa-principal;
+            font-weight: $font-weight-bold;
+        }
+
+        // Día con citas disponibles
+        &--available {
+            background-color: $rosa-secundario;
+            color: $negro;
+            border-color: $gris-medio;
+        }
+
+        // Día pasado
+        &--past {
+            background-color: $gris-claro;
+            color: $gris-medio;
+            border-color: $gris-medio;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        // Día deshabilitado
+        &--disabled {
+            color: $gris-claro;
+            background-color: $gris-claro;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        max-width: 500px;
+        padding: $espaciado-lg $espaciado-md;
+
+        &__month {
+            font-size: 24px;
+        }
+
+        &__nav {
+            width: 48px;
+            height: 48px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &__weekday {
+            font-size: 14px;
+            padding: 10px 6px;
+        }
+
+        &__day {
+            font-size: 16px;
+            min-height: 50px;
+        }
+
+        &__weekdays,
+        &__row {
+            gap: 8px;
+        }
+
+        &__days {
+            gap: 8px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        max-width: 600px;
+
+        &__month {
+            font-size: 28px;
+        }
+
+        &__weekday {
+            font-size: 16px;
+        }
+
+        &__day {
+            font-size: 18px;
+            min-height: 56px;
+        }
+    }
+}

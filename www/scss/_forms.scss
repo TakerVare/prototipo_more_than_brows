@@ -1,0 +1,195 @@
+// Componentes de formularios con BEM
+@use 'variables' as *;
+
+// Formulario de login
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-md;
+    width: 100%;
+}
+
+// Campo de formulario
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-xs;
+    width: 100%;
+
+    // Label
+    &__label {
+        display: block;
+        font-family: $font-family;
+        font-size: $font-size-body;
+        font-weight: $font-weight-normal;
+        line-height: 1.4;
+        color: $negro;
+        margin-bottom: 0;
+    }
+
+    // Input
+    &__input {
+        width: 100%;
+        padding: 12px $espaciado-sm;
+        font-family: $font-family;
+        font-size: $font-size-body;
+        font-weight: $font-weight-normal;
+        line-height: 1;
+        color: $negro;
+        background-color: $blanco;
+        border: 1px solid $gris-medio;
+        border-radius: $border-radius;
+        transition: $transicion;
+        outline: none;
+
+        &::placeholder {
+            color: $gris-oscuro;
+        }
+
+        &:focus {
+            border-color: $rosa-principal;
+            box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2);
+        }
+
+        &:hover:not(:focus) {
+            border-color: $rosa-acento;
+        }
+
+        // Error state
+        &:invalid:not(:placeholder-shown) {
+            border-color: #ff4444;
+        }
+    }
+
+    // Link
+    &__link {
+        display: block;
+        font-family: $font-family;
+        font-size: $font-size-body;
+        font-weight: $font-weight-normal;
+        line-height: 1.4;
+        color: $gris-oscuro;
+        text-decoration: none;
+        margin-left: 28px; // Alineado con el texto del checkbox
+        transition: $transicion;
+
+        &:hover {
+            color: $rosa-principal;
+            text-decoration: underline;
+        }
+    }
+
+    // Error message
+    &__error {
+        display: block;
+        font-family: $font-family;
+        font-size: $font-size-small;
+        color: #c41e3a;
+        margin-top: 4px;
+        font-weight: $font-weight-medium;
+
+        &:not(:empty) {
+            margin-top: $espaciado-xs;
+        }
+    }
+
+    // Modificador checkbox
+    &--checkbox {
+        gap: 0;
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-tablet) {
+        &__input {
+            padding: 14px $espaciado-md;
+            font-size: 18px;
+        }
+
+        &__label {
+            font-size: 18px;
+        }
+
+        &__link {
+            font-size: 18px;
+        }
+    }
+}
+
+// Checkbox
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: $espaciado-xs;
+    cursor: pointer;
+
+    // Input
+    &__input {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        min-height: 16px;
+        border: 1px solid $gris-medio;
+        border-radius: 4px;
+        background-color: $blanco;
+        cursor: pointer;
+        transition: $transicion;
+        position: relative;
+
+        &:hover {
+            border-color: $rosa-principal;
+        }
+
+        &:checked {
+            background-color: $negro;
+            border-color: $negro;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 10px;
+                height: 8px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2);
+        }
+    }
+
+    // Label
+    &__label {
+        font-family: $font-family;
+        font-size: $font-size-body;
+        font-weight: $font-weight-normal;
+        line-height: 1.4;
+        color: $negro;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-tablet) {
+        &__input {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            min-height: 20px;
+        }
+
+        &__label {
+            font-size: 18px;
+        }
+    }
+}

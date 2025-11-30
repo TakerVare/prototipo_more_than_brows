@@ -1,0 +1,104 @@
+// Estilos de accesibilidad WCAG
+@use 'variables' as *;
+
+// Skip link (para accesibilidad con teclado)
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: $rosa-principal;
+    color: $blanco;
+    padding: $espaciado-xs $espaciado-sm;
+    text-decoration: none;
+    font-family: $font-family;
+    font-size: $font-size-body;
+    font-weight: $font-weight-semibold;
+    z-index: 1000;
+    border-radius: 0 0 4px 0;
+    transition: top 0.2s ease;
+
+    &:focus {
+        top: 0;
+        outline: 3px solid $negro;
+        outline-offset: 2px;
+    }
+}
+
+// Screen reader only
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+// Screen reader only but focusable
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+// Focus visible para mejor accesibilidad con teclado
+*:focus-visible {
+    outline: 3px solid $rosa-principal;
+    outline-offset: 2px;
+}
+
+// Alto contraste para textos
+@media (prefers-contrast: high) {
+    body {
+        background-color: $blanco;
+        color: $negro;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .button--primary {
+        background-color: $negro;
+        border-color: $negro;
+        color: $blanco;
+    }
+
+    .button--secondary {
+        background-color: $blanco;
+        border-color: $negro;
+        color: $negro;
+    }
+}
+
+// Reducir movimiento para usuarios con preferencia de movimiento reducido
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+// Tamaños de fuente ajustables
+@media (min-width: $breakpoint-tablet) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    html {
+        font-size: 20px;
+    }
+}

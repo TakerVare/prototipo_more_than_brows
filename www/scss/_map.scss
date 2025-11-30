@@ -1,0 +1,62 @@
+// Componente Map (Mapa de Google) con BEM
+@use 'variables' as *;
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 197px;
+    background-color: $gris-claro;
+    overflow: hidden;
+
+    // Iframe
+    &__iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+    // Link to larger map
+    &__link {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        padding: 4px 12px;
+        background-color: $blanco;
+        color: #0369f0;
+        font-family: $font-family;
+        font-size: 12px;
+        font-weight: $font-weight-normal;
+        line-height: 1.45;
+        text-decoration: none;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: $transicion;
+        z-index: 10;
+
+        &:hover {
+            background-color: $gris-claro;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        &:focus-visible {
+            outline: 3px solid $rosa-principal;
+            outline-offset: 2px;
+        }
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        height: 250px;
+
+        &__link {
+            font-size: 14px;
+            padding: 6px 16px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        height: 300px;
+    }
+}

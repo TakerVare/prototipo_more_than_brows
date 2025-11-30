@@ -1,0 +1,127 @@
+// Componente User Menu (Menú de área de usuario) con BEM
+@use 'variables' as *;
+
+.user-menu {
+    max-width: 393px;
+    margin: 0 auto;
+    padding: $espaciado-sm;
+    min-height: calc(100vh - 170px - 100px);
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        max-width: 768px;
+        padding: $espaciado-md;
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        max-width: 1024px;
+    }
+}
+
+// Sección del menú (Área de administración / Área de usuario)
+.menu-section {
+    background-color: $blanco;
+    margin-bottom: $espaciado-md;
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+
+    // Título de la sección
+    &__title {
+        font-family: $font-family;
+        font-size: $font-size-h3;
+        font-weight: $font-weight-normal;
+        color: $negro;
+        background-color: $rosa-secundario;
+        padding: $espaciado-sm $espaciado-md;
+        margin: 0;
+        border-bottom: 1px solid $rosa-secundario;
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        &__title {
+            font-size: $font-size-h2;
+            padding: $espaciado-md $espaciado-lg;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        &__title {
+            font-size: $font-size-h1;
+        }
+    }
+}
+
+// Lista de opciones del menú
+.menu-list {
+    &__items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        border-bottom: 1px solid $gris-claro;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+// Enlace de opción del menú
+.menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $espaciado-sm $espaciado-md;
+    min-height: 44px;
+    text-decoration: none;
+    color: $negro;
+    font-family: $font-family;
+    font-size: $font-size-h4;
+    font-weight: $font-weight-normal;
+    transition: $transicion;
+    background-color: $blanco;
+
+    &:hover {
+        background-color: $gris-claro;
+    }
+
+    &:focus-visible {
+        outline: 3px solid $rosa-principal;
+        outline-offset: -3px;
+    }
+
+    // Texto del enlace
+    &__text {
+        flex: 1;
+        line-height: 1.2;
+    }
+
+    // Icono de flecha
+    &__icon {
+        width: 20px;
+        height: 20px;
+        stroke: $rosa-acento;
+        flex-shrink: 0;
+        margin-left: $espaciado-sm;
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        padding: $espaciado-md $espaciado-lg;
+        font-size: $espaciado-md;
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        font-size: 28px;
+    }
+}

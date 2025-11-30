@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto y ubicación de More than brows - Horarios y formas de contacto">
+    <title>Contacto y Ubicación - More than brows</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page">
+    <!-- Skip to main content link para accesibilidad -->
+    <a href="#main-content" class="skip-link">
+        Saltar al contenido principal
+    </a>
+
+    <!-- Header con logo -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <img src="resources/Logo_Recto_More_Than_Brows_SIN_fondo.png"
+                 alt="More than brows - Logotipo"
+                 class="header__logo">
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main id="main-content" class="main" role="main">
+        <article class="contact" itemscope itemtype="https://schema.org/LocalBusiness">
+            <div class="contact__container">
+
+                <!-- Mapa de ubicación -->
+                <section class="contact__map" aria-labelledby="map-title">
+                    <h2 id="map-title" class="sr-only">Ubicación en el mapa</h2>
+                    <div class="map-container" role="img" aria-label="Mapa que muestra la ubicación de More than brows en Zaragoza">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.5!2d-0.8776!3d41.6488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDM4JzU1LjciTiAwwrA1Mic0MC4yIlc!5e0!3m2!1ses!2ses!4v1234567890"
+                            width="100%"
+                            height="197"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de More than brows en Google Maps"
+                            class="map-container__iframe">
+                        </iframe>
+                        <!--<a href="https://maps.google.com/?q=More+than+brows+Zaragoza"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="map-container__link"
+                           aria-label="Ver mapa más grande en Google Maps (se abre en nueva ventana)">
+                            Ver mapa más grande
+                        </a>-->
+                    </div>
+                </section>
+
+                <!-- Horario de apertura -->
+                <section class="contact__hours" aria-labelledby="hours-title">
+                    <h2 id="hours-title" class="contact__title">
+                        Horario de apertura
+                    </h2>
+                    <div class="schedule" itemprop="openingHours" content="Mo-Fr 10:00-14:00,15:00-20:00">
+                        <p class="schedule__day">
+                            <strong>Lunes a viernes:</strong>
+                        </p>
+                        <ul class="schedule__times" role="list">
+                            <li class="schedule__time">
+                                <time datetime="10:00">de 10:00</time> a <time datetime="14:00">14:00</time>
+                            </li>
+                            <li class="schedule__time">
+                                <time datetime="15:00">de 15:00</time> a <time datetime="20:00">20:00</time>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Datos de contacto -->
+                <section class="contact__info" aria-labelledby="contact-title">
+                    <h2 id="contact-title" class="contact__title">
+                        Datos de contacto
+                    </h2>
+
+                    <ul class="contact-list" role="list">
+                        <!-- Teléfono -->
+                        <li class="contact-list__item">
+                            <a href="tel:+34649227139"
+                               class="contact-link"
+                               itemprop="telephone"
+                               aria-label="Llamar al teléfono 649 227 139">
+                                <svg class="contact-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <span class="contact-link__text">649 227 139</span>
+                            </a>
+                        </li>
+
+                        <!-- Instagram -->
+                        <li class="contact-list__item">
+                            <a href="https://instagram.com/morethanbrows.zgz"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="contact-link"
+                               itemprop="sameAs"
+                               aria-label="Visitar nuestro perfil de Instagram @morethanbrows.zgz (se abre en nueva ventana)">
+                                <svg class="contact-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                                <span class="contact-link__text">@morethanbrows.zgz</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Datos estructurados ocultos para SEO -->
+                <div class="sr-only" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <span itemprop="addressLocality">Zaragoza</span>,
+                    <span itemprop="addressCountry">España</span>
+                </div>
+                <meta itemprop="name" content="More than brows">
+            </div>
+        </article>
+    </main>
+
+    <!-- Navegación inferior -->
+    <nav class="nav-bar" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-bar__list" role="list">
+            <li class="nav-bar__item">
+                <a href="./index.html" class="nav-bar__link" aria-label="Ir a inicio" aria-current="false">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span class="sr-only">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-bar__item nav-bar__item--active">
+                <a href="./about-as.html" class="nav-bar__link" aria-label="Ver ubicación y contacto" aria-current="page">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span class="sr-only">Ubicación y contacto (página actual)</span>
+                </a>
+            </li>
+            <li class="nav-bar__item">
+                <a href="./user-area.html" class="nav-bar__link" aria-label="Ir a mi perfil" aria-current="false">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span class="sr-only">Mi perfil</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

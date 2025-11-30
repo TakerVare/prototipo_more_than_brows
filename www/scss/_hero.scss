@@ -1,0 +1,130 @@
+// Componente Hero con BEM
+@use 'variables' as *;
+
+.hero {
+    position: relative;
+    min-height: calc(100vh - 170px - 100px); // Viewport menos header y nav
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $espaciado-lg $espaciado-sm;
+    overflow: hidden;
+
+    // Background
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0.3) 100%
+            );
+        }
+    }
+
+    &__background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    // Content
+    &__content {
+        position: relative;
+        z-index: 2;
+        max-width: 393px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $espaciado-md;
+        text-align: center;
+    }
+
+    // Title
+    &__title {
+        font-size: $font-size-h1;
+        font-weight: $font-weight-bold;
+        line-height: 1.2;
+        color: $negro;
+        letter-spacing: -0.96px;
+        margin-bottom: $espaciado-sm;
+    }
+
+    // Description
+    &__description {
+        font-size: $font-size-h3;
+        font-weight: $font-weight-normal;
+        line-height: 1.5;
+        color: $negro;
+        margin-bottom: $espaciado-md;
+    }
+
+    // Button
+    &__button {
+        margin-top: $espaciado-sm;
+        padding: $espaciado-lg $espaciado-sm;
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        min-height: calc(100vh - 200px - 120px);
+        padding: $espaciado-xl $espaciado-lg;
+
+        &__content {
+            max-width: 600px;
+            gap: $espaciado-lg;
+        }
+
+        &__title {
+            font-size: 56px;
+        }
+
+        &__description {
+            font-size: 30px;
+            line-height: 1.4;
+        }
+
+        &__button {
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        min-height: calc(100vh - 220px - 120px);
+        padding: $espaciado-xxl $espaciado-xl;
+
+        &__content {
+            max-width: 800px;
+            gap: $espaciado-xl;
+        }
+
+        &__title {
+            font-size: 64px;
+        }
+
+        &__description {
+            font-size: 32px;
+        }
+
+        &__button {
+            max-width: 450px;
+            font-size: 18px;
+        }
+    }
+}

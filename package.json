@@ -1,0 +1,17 @@
+{
+  "name": "prototipo_more_than_brows",
+  "version": "1.0.0",
+  "description": "Repositorio para crear los prototipos de la web prototipo_more_than_brows",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass www/scss/styles.scss www/css/styles.css",
+    "sass:watch": "sass --watch www/scss/styles.scss www/css/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.94.2"
+  }
+}

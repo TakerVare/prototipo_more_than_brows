@@ -1,0 +1,40 @@
+// Componente Header con BEM
+@use 'variables' as *;
+
+.header {
+    background-color: $blanco;
+    padding: $espaciado-md 0;
+    position: relative;
+    z-index: 100;
+
+    // Container
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 $espaciado-sm;
+    }
+
+    // Logo
+    &__logo {
+        width: 100%;
+        max-width: 393px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-tablet) {
+        padding: $espaciado-lg 0;
+
+        &__logo {
+            max-width: 450px;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        &__logo {
+            max-width: 500px;
+        }
+    }
+}

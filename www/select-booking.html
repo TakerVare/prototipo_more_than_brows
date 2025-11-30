@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selecciona fecha y hora para tu cita en More than brows">
+    <title>Seleccionar Cita - More than brows</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/calendar.js" defer></script>
+</head>
+<body class="page">
+    <!-- Skip to main content link para accesibilidad -->
+    <a href="#main-content" class="skip-link">
+        Saltar al contenido principal
+    </a>
+
+    <!-- Header con título de gestión -->
+    <header class="page-header" role="banner">
+        <div class="page-header__container">
+            <h1 class="page-header__title">
+                Gestión de Usuarios
+            </h1>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main id="main-content" class="main" role="main">
+        <div class="booking">
+            <!-- Botón volver -->
+            <div class="booking__header">
+                <a href="./home.html" class="back-button" aria-label="Volver a la página anterior">
+                    <svg class="back-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span class="back-button__text">Volver</span>
+                </a>
+            </div>
+
+            <!-- Calendario -->
+            <section class="calendar" aria-labelledby="calendar-title">
+                <h2 id="calendar-title" class="sr-only">Calendario de selección de fecha</h2>
+
+                <div class="calendar__header">
+                    <button type="button" class="calendar__nav calendar__nav--prev" aria-label="Mes anterior">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <h3 class="calendar__month" aria-live="polite">
+                        <time datetime="">Mes Año</time>
+                    </h3>
+                    <button type="button" class="calendar__nav calendar__nav--next" aria-label="Mes siguiente">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="calendar__grid" role="grid" aria-label="Calendario de selección">
+                    <!-- Días de la semana -->
+                    <div class="calendar__weekdays" role="row">
+                        <div class="calendar__weekday" role="columnheader" aria-label="Domingo">DOM</div>
+                        <div class="calendar__weekday" role="columnheader" aria-label="Lunes">LUN</div>
+                        <div class="calendar__weekday" role="columnheader" aria-label="Martes">MAR</div>
+                        <div class="calendar__weekday" role="columnheader" aria-label="Miércoles">MIÉ</div>
+                        <div class="calendar__weekday" role="columnheader" aria-label="Jueves">JUE</div>
+                        <div class="calendar__weekday" role="columnheader" aria-label="Viernes">VIE</div>
+                        <div class="calendar__weekday" role="columnheader" aria-label="Sábado">SÁB</div>
+                    </div>
+
+                    <!-- Días del mes (generados dinámicamente por JavaScript) -->
+                    <div class="calendar__days" role="rowgroup"></div>
+                </div>
+            </section>
+
+            <!-- Citas disponibles -->
+            <section class="booking-slots" aria-labelledby="slots-title">
+                <h2 id="slots-title" class="booking-slots__title">
+                    Citas disponibles:
+                </h2>
+
+                <!-- Profesional: Sofía -->
+                <div class="professional">
+                    <h3 class="professional__name">Sofía</h3>
+                    <div class="professional__slots" role="group" aria-label="Horarios disponibles con Sofía">
+                        <button type="button" class="time-slot" aria-label="Cita a las 10:00 con Sofía">
+                            <time datetime="10:00">10:00</time>
+                        </button>
+                        <button type="button" class="time-slot" aria-label="Cita a las 10:45 con Sofía">
+                            <time datetime="10:45">10:45</time>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profesional: Brenda -->
+                <div class="professional">
+                    <h3 class="professional__name">Brenda</h3>
+                    <div class="professional__slots" role="group" aria-label="Horarios disponibles con Brenda">
+                        <button type="button" class="time-slot" aria-label="Cita a las 10:00 con Brenda">
+                            <time datetime="10:00">10:00</time>
+                        </button>
+                        <button type="button" class="time-slot" aria-label="Cita a las 11:30 con Brenda">
+                            <time datetime="11:30">11:30</time>
+                        </button>
+                        <button type="button" class="time-slot" aria-label="Cita a las 10:00 con Brenda">
+                            <time datetime="10:00">10:00</time>
+                        </button>
+                        <button type="button" class="time-slot" aria-label="Cita a las 11:30 con Brenda">
+                            <time datetime="11:30">11:30</time>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Navegación inferior -->
+    <nav class="nav-bar" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-bar__list" role="list">
+            <li class="nav-bar__item">
+                <a href="./index.html" class="nav-bar__link" aria-label="Ir a inicio" aria-current="false">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span class="sr-only">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-bar__item">
+                <a href="./about-as.html" class="nav-bar__link" aria-label="Ver ubicación" aria-current="false">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span class="sr-only">Ubicación</span>
+                </a>
+            </li>
+            <li class="nav-bar__item nav-bar__item--active">
+                <a href="./user-area.html" class="nav-bar__link" aria-label="Ir a mi perfil" aria-current="page">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span class="sr-only">Mi perfil (página actual)</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
