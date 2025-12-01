@@ -1,0 +1,115 @@
+// Componente Form Field (Campo de Formulario) con BEM
+@use 'variables' as *;
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-xs;
+
+    &__label {
+        font-family: $font-family;
+        font-size: $font-size-h4;
+        font-weight: $font-weight-normal;
+        color: $negro;
+        display: block;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: $espaciado-md;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: 28px;
+        }
+    }
+
+    &__input,
+    &__select {
+        width: 100%;
+        padding: $espaciado-sm;
+        font-family: $font-family;
+        font-size: $font-size-body;
+        color: $negro;
+        background-color: $blanco;
+        border: 1px solid $gris-medio;
+        border-radius: $border-radius;
+        min-height: 44px;
+        transition: $transicion;
+
+        &::placeholder {
+            color: $gris-oscuro;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $rosa-principal;
+            box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.2);
+        }
+
+        &:focus-visible {
+            outline: 3px solid $rosa-principal;
+            outline-offset: 2px;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            padding: $espaciado-md;
+            font-size: $font-size-h4;
+            min-height: 48px;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: $espaciado-md;
+        }
+    }
+
+    // Select wrapper para posicionar el icono
+    &__select-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__select {
+        appearance: none;
+        padding-right: $espaciado-xl;
+        cursor: pointer;
+
+        // Ocultar la flecha por defecto en IE
+        &::-ms-expand {
+            display: none;
+        }
+    }
+
+    &__select-icon {
+        position: absolute;
+        right: $espaciado-sm;
+        width: 20px;
+        height: 20px;
+        stroke: $rosa-principal;
+        pointer-events: none;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 24px;
+            height: 24px;
+            right: $espaciado-md;
+        }
+    }
+
+    // Estados de validación
+    &__input:invalid:not(:focus):not(:placeholder-shown),
+    &__select:invalid:not(:focus) {
+        border-color: $rosa-acento;
+    }
+
+    &__input:valid:not(:focus):not(:placeholder-shown),
+    &__select:valid:not(:focus) {
+        border-color: $gris-medio;
+    }
+
+    // Soporte para motion reducido
+    @media (prefers-reduced-motion: reduce) {
+        &__input,
+        &__select {
+            transition: none;
+        }
+    }
+}

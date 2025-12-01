@@ -1,0 +1,52 @@
+// Componente User Detail (Detalle de Usuario) con BEM
+@use 'variables' as *;
+
+.user-detail {
+    max-width: 393px;
+    margin: 0 auto;
+    min-height: calc(100vh - 100px);
+    background-color: $blanco;
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        max-width: 768px;
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        max-width: 1024px;
+    }
+
+    // Header de la página
+    &__header {
+        background-color: $rosa-principal;
+        padding: $espaciado-sm $espaciado-sm;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        @media (min-width: $breakpoint-tablet) {
+            padding: $espaciado-md $espaciado-md;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            padding: $espaciado-lg $espaciado-lg;
+        }
+    }
+
+    // Título de la página
+    &__title {
+        font-family: $font-family;
+        font-size: $font-size-h3;
+        font-weight: $font-weight-normal;
+        color: $negro;
+        margin: 0;
+        text-align: left;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: $font-size-h2;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: $font-size-h1;
+        }
+    }
+}

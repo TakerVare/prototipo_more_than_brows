@@ -12,5 +12,12 @@
         "password": "admin123",
         "name": "Administrador",
         "role": "employer"
+    },
+    {
+        "id": 3,
+        "email": "a@as.com",
+        "password": "1",
+        "name": "Administrador",
+        "role": "employer"
     }
 ]

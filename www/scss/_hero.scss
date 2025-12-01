@@ -3,7 +3,7 @@
 
 .hero {
     position: relative;
-    min-height: calc(100vh - 170px - 100px); // Viewport menos header y nav
+    min-height: calc(100vh - 170px); // Viewport menos header, llega hasta nav-bar
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +80,7 @@
 
     // Tablet
     @media (min-width: $breakpoint-tablet) {
-        min-height: calc(100vh - 200px - 120px);
+        min-height: calc(100vh - 200px); // Viewport menos header, llega hasta nav-bar
         padding: $espaciado-xl $espaciado-lg;
 
         &__content {
@@ -106,7 +106,7 @@
 
     // Desktop
     @media (min-width: $breakpoint-desktop) {
-        min-height: calc(100vh - 220px - 120px);
+        min-height: calc(100vh - 220px); // Viewport menos header, llega hasta nav-bar
         padding: $espaciado-xxl $espaciado-xl;
 
         &__content {

@@ -1,0 +1,150 @@
+// Componente Appointment Empty (Home sin cita) con BEM
+@use 'variables' as *;
+
+.appointment-empty {
+    min-height: calc(100vh - 170px - 100px); // Viewport menos header y nav (igual que .appointment)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $espaciado-lg $espaciado-sm; // Mismo padding que .appointment
+    background-color: $blanco;
+
+    // Content wrapper (igual que .appointment__container)
+    &__content {
+        width: 100%;
+        max-width: 393px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    // Status section
+    &__status {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: $espaciado-md; // Mismo que .appointment__title
+    }
+
+    // Subtitle (Próxima cita:) - similar a .appointment__title
+    &__subtitle {
+        font-family: $font-family;
+        font-size: $font-size-h3; // 24px como .appointment__title
+        font-weight: $font-weight-semibold; // 600 como .appointment__title
+        line-height: 1.2;
+        color: $negro;
+        letter-spacing: -0.48px; // Mismo que .appointment__title
+        margin: 0 0 $espaciado-md 0; // Mismo margin-bottom que .appointment__title
+        padding: 0 $espaciado-md; // Mismo padding que .appointment__title
+    }
+
+    // Message (No hay citas asignadas) - similar a .appointment__datetime
+    &__message {
+        font-family: $font-family;
+        font-size: $font-size-h1; // 48px según guía de estilo (Principal Titulos)
+        font-weight: $font-weight-normal; // 400
+        line-height: 1.4; // Mismo que .appointment__datetime
+        color: $negro;
+        margin: 0 0 $espaciado-xl 0; // Mismo margin-bottom que .appointment__datetime
+        padding: $espaciado-lg 0; // Mismo padding que .appointment__datetime (32px 0)
+        max-width: 335px;
+    }
+
+    // Action container - similar a .appointment__actions
+    &__action {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 359px; // Mismo que .appointment__actions
+        padding: $espaciado-md $espaciado-xs; // Mismo que .appointment__actions
+    }
+
+    // Button styles
+    .button {
+        width: 100%;
+        max-width: 287px;
+        padding: $espaciado-sm $espaciado-lg; // Mismo padding que .button estándar
+        background-color: $rosa-principal;
+        color: $blanco;
+        font-family: $font-family;
+        font-size: $font-size-body; // 16px
+        font-weight: $font-weight-normal;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: $border-radius; // 0px
+        cursor: pointer;
+        transition: $transicion;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.5px; // Mismo que .button
+
+        &:hover {
+            background-color: $rosa-acento;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+
+        &:focus-visible {
+            outline: 3px solid $rosa-principal;
+            outline-offset: 2px;
+        }
+    }
+
+    // Tablet
+    @media (min-width: $breakpoint-tablet) {
+        min-height: calc(100vh - 200px - 120px); // Mismo que .appointment
+        padding: $espaciado-xl $espaciado-lg; // Mismo que .appointment
+
+        &__content {
+            max-width: 500px;
+        }
+
+        &__subtitle {
+            font-size: 28px; // Escalado proporcional
+        }
+
+        &__message {
+            font-size: 56px; // Escalado proporcional
+            max-width: 500px;
+        }
+
+        .button {
+            font-size: 18px; // Mismo que .button en tablet
+            padding: $espaciado-md $espaciado-xl; // Mismo que .button en tablet
+            max-width: 350px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $breakpoint-desktop) {
+        min-height: calc(100vh - 220px - 120px); // Mismo que .appointment
+        padding: $espaciado-xxl $espaciado-xl; // Mismo que .appointment
+
+        &__content {
+            max-width: 600px;
+        }
+
+        &__subtitle {
+            font-size: 32px;
+        }
+
+        &__message {
+            font-size: 64px;
+            max-width: 600px;
+        }
+
+        .button {
+            max-width: 400px;
+        }
+    }
+}

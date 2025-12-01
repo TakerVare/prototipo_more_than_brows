@@ -13,11 +13,14 @@
 // Componentes
 @use 'action-buttons';
 @use 'appointment';
+@use 'appointment-empty';
+@use 'avatar-action';
 @use 'back-button';
 @use 'booking-slots';
 @use 'buttons';
 @use 'calendar';
 @use 'contact';
+@use 'form-field';
 @use 'forms';
 @use 'header';
 @use 'hero';
@@ -25,8 +28,12 @@
 @use 'map';
 @use 'nav-bar';
 @use 'page-header';
+@use 'page-title';
 @use 'search-bar';
 @use 'user-action';
+@use 'user-avatar';
+@use 'user-detail';
+@use 'user-form';
 @use 'user-list';
 @use 'user-menu';
 @use 'users-manager';

@@ -1,0 +1,50 @@
+// Componente User Form (Formulario de Usuario) con BEM
+@use 'variables' as *;
+
+.user-form {
+    padding: $espaciado-md $espaciado-sm;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: $espaciado-lg $espaciado-md;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: $espaciado-xl $espaciado-lg;
+    }
+
+    &__title {
+        font-family: $font-family;
+        font-size: $font-size-h3;
+        font-weight: $font-weight-normal;
+        color: $negro;
+        margin: 0 0 $espaciado-md 0;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: $font-size-h2;
+            margin-bottom: $espaciado-lg;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: $font-size-h1;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: $espaciado-md;
+
+        @media (min-width: $breakpoint-tablet) {
+            gap: $espaciado-lg;
+        }
+    }
+
+    // Modificador para botones de formulario
+    .action-buttons--form {
+        margin-top: $espaciado-md;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: $espaciado-lg;
+        }
+    }
+}

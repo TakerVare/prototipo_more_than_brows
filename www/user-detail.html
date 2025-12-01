@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalle de usuario de More than brows">
+    <title>Detalle de Usuario - More than brows</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page">
+    <!-- Skip to main content link para accesibilidad -->
+    <a href="#main-content" class="skip-link">
+        Saltar al contenido principal
+    </a>
+
+    <!-- Header con logo -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <img src="resources/Logo_Recto_More_Than_Brows_SIN_fondo.png"
+                 alt="More than brows - Logotipo"
+                 class="header__logo">
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main id="main-content" class="main" role="main">
+        <div class="user-detail">
+            <!-- T�tulo de la p�gina -->
+            <header class="user-detail__header">
+                <h1 class="user-detail__title">Nuevo Usuario</h1>
+            </header>
+
+            <!-- Botones de acci�n superiores -->
+            <div class="action-buttons">
+                <a href="./users-manager.html" class="button button--primary">
+                    <svg class="button__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="button__text">Volver</span>
+                </a>
+                <button type="button" class="button button--secondary">
+                    <span class="button__text">Eliminar</span>
+                    <svg class="button__icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Avatar de usuario y acciones -->
+            <section class="user-avatar" aria-labelledby="user-avatar-title">
+                <h2 id="user-avatar-title" class="sr-only">Avatar y acciones de usuario</h2>
+
+                <div class="user-avatar__container">
+                    <div class="user-avatar__image">
+                        <svg class="user-avatar__img" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="60" cy="60" r="60" fill="#FFE4E1"/>
+                            <circle cx="60" cy="50" r="20" fill="#FFB6C1"/>
+                            <path d="M30 95C30 77 42 70 60 70C78 70 90 77 90 95" fill="#FFB6C1"/>
+                        </svg>
+                    </div>
+
+                    <div class="user-avatar__actions" role="group" aria-label="Acciones de avatar">
+                        <button type="button" class="avatar-action avatar-action--camera" aria-label="Cambiar foto de perfil">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="4"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="avatar-action avatar-action--upload" aria-label="Subir nueva imagen">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="avatar-action avatar-action--delete" aria-label="Eliminar imagen de perfil">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formulario de datos de usuario -->
+            <section class="user-form" aria-labelledby="user-form-title">
+                <h2 id="user-form-title" class="user-form__title">Datos de usuario</h2>
+
+                <form class="user-form__form" method="post" action="#">
+                    <!-- Campo Nombre -->
+                    <div class="form-field">
+                        <label for="user-name" class="form-field__label">Nombre</label>
+                        <input
+                            type="text"
+                            id="user-name"
+                            name="name"
+                            class="form-field__input"
+                            placeholder="Introduce el nombre"
+                            required
+                            aria-required="true">
+                    </div>
+
+                    <!-- Campo Apellidos -->
+                    <div class="form-field">
+                        <label for="user-surname" class="form-field__label">Apellidos</label>
+                        <input
+                            type="text"
+                            id="user-surname"
+                            name="surname"
+                            class="form-field__input"
+                            placeholder="Introduce los apellidos"
+                            required
+                            aria-required="true">
+                    </div>
+
+                    <!-- Campo Email -->
+                    <div class="form-field">
+                        <label for="user-email" class="form-field__label">Email</label>
+                        <input
+                            type="email"
+                            id="user-email"
+                            name="email"
+                            class="form-field__input"
+                            placeholder="ejemplo@correo.com"
+                            required
+                            aria-required="true">
+                    </div>
+
+                    <!-- Campo Tel�fono -->
+                    <div class="form-field">
+                        <label for="user-phone" class="form-field__label">Tel�fono</label>
+                        <input
+                            type="tel"
+                            id="user-phone"
+                            name="phone"
+                            class="form-field__input"
+                            placeholder="600 123 456"
+                            pattern="[0-9]{9}"
+                            required
+                            aria-required="true">
+                    </div>
+
+                    <!-- Campo Rol -->
+                    <div class="form-field">
+                        <label for="user-role" class="form-field__label">Rol</label>
+                        <div class="form-field__select-wrapper">
+                            <select
+                                id="user-role"
+                                name="role"
+                                class="form-field__select"
+                                required
+                                aria-required="true">
+                                <option value="cliente" selected>Cliente</option>
+                                <option value="empleado">Empleado</option>
+                                <option value="administrador">Administrador</option>
+                            </select>
+                            <svg class="form-field__select-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true" focusable="false">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Campo Estado -->
+                    <div class="form-field">
+                        <label for="user-status" class="form-field__label">Estado</label>
+                        <div class="form-field__select-wrapper">
+                            <select
+                                id="user-status"
+                                name="status"
+                                class="form-field__select"
+                                required
+                                aria-required="true">
+                                <option value="activo" selected>Activo</option>
+                                <option value="inactivo">Inactivo</option>
+                            </select>
+                            <svg class="form-field__select-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true" focusable="false">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Botones de acci�n del formulario -->
+                    <div class="action-buttons action-buttons--form">
+                        <button type="submit" class="button button--primary">
+                            <span class="button__text">Guardar</span>
+                        </button>
+                        <button type="button" class="button button--secondary">
+                            <span class="button__text">Cancelar</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Navegaci�n inferior -->
+    <nav class="nav-bar" role="navigation" aria-label="Navegaci�n principal">
+        <ul class="nav-bar__list" role="list">
+            <li class="nav-bar__item">
+                <a href="./index.html" class="nav-bar__link" aria-label="Ir a inicio" aria-current="false">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span class="sr-only">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-bar__item">
+                <a href="./about-as.html" class="nav-bar__link" aria-label="Ver ubicaci�n" aria-current="false">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span class="sr-only">Ubicaci�n</span>
+                </a>
+            </li>
+            <li class="nav-bar__item nav-bar__item--active">
+                <a href="./user-area.html" class="nav-bar__link" aria-label="Ir a mi perfil" aria-current="page">
+                    <svg class="nav-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span class="sr-only">Mi perfil (p�gina actual)</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

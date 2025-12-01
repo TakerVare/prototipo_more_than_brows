@@ -1,0 +1,33 @@
+// Componente Page Title (Título de página) con BEM
+@use 'variables' as *;
+
+.page-title {
+    background-color: $rosa-principal;
+    padding: $espaciado-sm;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: $espaciado-md;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: $espaciado-lg;
+    }
+
+    &__text {
+        font-family: $font-family;
+        font-size: $font-size-h3;
+        font-weight: $font-weight-normal;
+        color: $negro;
+        margin: 0;
+        text-align: left;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: $font-size-h2;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: $font-size-h1;
+        }
+    }
+}
