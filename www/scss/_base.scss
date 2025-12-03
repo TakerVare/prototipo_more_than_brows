@@ -30,6 +30,16 @@ body {
 // Main content
 .main {
     flex: 1;
+    // Espacio para el nav-bar sticky + margen extra
+    padding-bottom: 96px; // 72px nav + 24px
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-bottom: 112px; // 80px nav + 32px
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding-bottom: 122px; // 90px nav + 32px
+    }
 }
 
 // Imágenes responsive

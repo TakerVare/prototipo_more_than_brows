@@ -73,9 +73,10 @@
 
     // Tablet y Desktop
     @media (min-width: $breakpoint-tablet) {
-        position: relative;
-        border-top: none;
-        border-bottom: 1px solid $gris-medio;
+        // Mantener fixed
+        // position: relative; 
+        // border-top: none;
+        // border-bottom: 1px solid $gris-medio;
         background-color: $blanco;
 
         &__list {
