@@ -57,7 +57,7 @@
 
         // Error state
         &:invalid:not(:placeholder-shown) {
-            border-color: #ff4444;
+            border-color: #ff4444; // Mantener borde rojo brillante para input inválido
         }
     }
 
@@ -84,7 +84,7 @@
         display: block;
         font-family: $font-family;
         font-size: $font-size-small;
-        color: #c41e3a;
+        color: $color-error;
         margin-top: 4px;
         font-weight: $font-weight-medium;
 

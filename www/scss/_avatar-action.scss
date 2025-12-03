@@ -1,12 +1,13 @@
 // Componente Avatar Action (Botones de acción de avatar) con BEM
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .avatar-action {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: $avatar-size-sm;
+    min-height: $avatar-size-sm;
     padding: $espaciado-xs;
     background-color: transparent;
     border: none;
@@ -14,19 +15,22 @@
     cursor: pointer;
     transition: $transicion;
 
-    @media (min-width: $breakpoint-tablet) {
-        min-width: 48px;
-        min-height: 48px;
+    // Tablet
+    @include respond-to(tablet) {
+        min-width: $avatar-size-md;
+        min-height: $avatar-size-md;
         padding: $espaciado-sm;
     }
 
+    // Icon
     svg {
         width: 24px;
         height: 24px;
         stroke: $rosa-principal;
         transition: $transicion;
 
-        @media (min-width: $breakpoint-tablet) {
+        // Tablet
+        @include respond-to(tablet) {
             width: 28px;
             height: 28px;
         }

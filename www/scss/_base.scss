@@ -1,5 +1,6 @@
 // Estilos base y reset
 @use 'variables' as *;
+@use 'mixins' as *;
 
 * {
     margin: 0;
@@ -31,14 +32,14 @@ body {
 .main {
     flex: 1;
     // Espacio para el nav-bar sticky + margen extra
-    padding-bottom: 96px; // 72px nav + 24px
+    padding-bottom: calc(#{$nav-height-mobile} + #{$espaciado-md});
 
-    @media (min-width: $breakpoint-tablet) {
-        padding-bottom: 112px; // 80px nav + 32px
+    @include respond-to(tablet) {
+        padding-bottom: calc(#{$nav-height-tablet} + #{$espaciado-lg});
     }
 
-    @media (min-width: $breakpoint-desktop) {
-        padding-bottom: 122px; // 90px nav + 32px
+    @include respond-to(desktop) {
+        padding-bottom: calc(#{$nav-height-desktop} + #{$espaciado-lg});
     }
 }
 

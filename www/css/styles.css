@@ -25,16 +25,16 @@ body {
 
 .main {
   flex: 1;
-  padding-bottom: 96px;
+  padding-bottom: calc(72px + 24px);
 }
 @media (min-width: 768px) {
   .main {
-    padding-bottom: 112px;
+    padding-bottom: calc(80px + 32px);
   }
 }
 @media (min-width: 1024px) {
   .main {
-    padding-bottom: 122px;
+    padding-bottom: calc(90px + 32px);
   }
 }
 
@@ -1219,8 +1219,10 @@ ul {
 .form-field__select-icon {
   position: absolute;
   right: 16px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
   stroke: #FFB6C1;
   pointer-events: none;
 }
@@ -1581,38 +1583,9 @@ ul {
   border: 0;
   display: block;
 }
-.map-container__link {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 4px 12px;
-  background-color: #FFFFFF;
-  color: #0369f0;
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.45;
-  text-decoration: none;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-.map-container__link:hover {
-  background-color: #F5F5F5;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-.map-container__link:focus-visible {
-  outline: 3px solid #FFB6C1;
-  outline-offset: 2px;
-}
 @media (min-width: 768px) {
   .map-container {
     height: 250px;
-  }
-  .map-container__link {
-    font-size: 14px;
-    padding: 6px 16px;
   }
 }
 @media (min-width: 1024px) {
@@ -1633,6 +1606,7 @@ ul {
 .nav-bar__list {
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: space-around;
   height: 72px;
   max-width: 393px;
@@ -1951,6 +1925,24 @@ ul {
   height: 120px;
   border-radius: 50%;
   overflow: hidden;
+}
+.user-avatar__image--large {
+  width: 120px;
+  height: 120px;
+}
+@media (min-width: 768px) {
+  .user-avatar__image--large {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  .user-avatar__image--large {
+    width: 180px;
+    height: 180px;
+  }
+}
+.user-avatar__image {
   background-color: #F5F5F5;
   flex-shrink: 0;
 }

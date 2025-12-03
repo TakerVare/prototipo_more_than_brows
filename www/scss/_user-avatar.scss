@@ -1,5 +1,6 @@
 // Componente User Avatar (Avatar de Usuario) con BEM
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .user-avatar {
     padding: $espaciado-md $espaciado-sm;
@@ -29,6 +30,33 @@
         height: 120px;
         border-radius: 50%;
         overflow: hidden;
+
+        // Modificador large
+        &--large {
+            width: $avatar-size-lg;
+            height: $avatar-size-lg;
+        }
+
+        // Tablet
+        @include respond-to(tablet) {
+
+            // Modificador large
+            &--large {
+                width: $avatar-size-xl;
+                height: $avatar-size-xl;
+            }
+        }
+
+        // Desktop
+        @include respond-to(desktop) {
+
+            // Modificador large
+            &--large {
+                width: $avatar-size-xxl;
+                height: $avatar-size-xxl;
+            }
+        }
+
         background-color: $gris-claro;
         flex-shrink: 0;
 

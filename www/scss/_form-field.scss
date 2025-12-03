@@ -82,8 +82,10 @@
     &__select-icon {
         position: absolute;
         right: $espaciado-sm;
-        width: 20px;
-        height: 20px;
+        width: $espaciado-sm;
+        height: $espaciado-sm;
+        min-width: $espaciado-sm;
+        min-height: $espaciado-sm;
         stroke: $rosa-principal;
         pointer-events: none;
 
@@ -107,6 +109,7 @@
 
     // Soporte para motion reducido
     @media (prefers-reduced-motion: reduce) {
+
         &__input,
         &__select {
             transition: none;

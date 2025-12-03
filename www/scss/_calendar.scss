@@ -110,7 +110,7 @@
         cursor: pointer;
         transition: $transicion;
         padding: 0;
-        min-height: 44px;
+        min-height: $avatar-size-sm;
 
         &:hover:not(&--empty):not(&--selected) {
             background-color: $rosa-secundario;
@@ -174,8 +174,8 @@
         }
 
         &__nav {
-            width: 48px;
-            height: 48px;
+            width: $avatar-size-md;
+            height: $avatar-size-md;
 
             svg {
                 width: 24px;

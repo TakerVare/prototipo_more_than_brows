@@ -1,5 +1,6 @@
 // Componente Button con BEM
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .button {
     padding: $espaciado-sm $espaciado-lg;
@@ -60,7 +61,7 @@
     }
 
     // Desktop
-    @media (min-width: $breakpoint-tablet) {
+    @include respond-to(tablet) {
         font-size: 18px;
         padding: $espaciado-md $espaciado-xl;
     }

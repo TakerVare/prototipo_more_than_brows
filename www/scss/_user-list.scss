@@ -34,7 +34,7 @@
     justify-content: space-between;
     padding: $espaciado-sm 0;
     gap: $espaciado-sm;
-    min-height: 60px;
+    min-height: 60px; // Mantener altura específica para la lista
 
     @media (min-width: $breakpoint-tablet) {
         padding: $espaciado-md 0;

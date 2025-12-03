@@ -1,5 +1,6 @@
 // Componente Navigation Bar con BEM
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .nav-bar {
     position: fixed;
@@ -12,10 +13,9 @@
 
     // List
     &__list {
-        display: flex;
-        align-items: center;
+        @include flex-center;
         justify-content: space-around;
-        height: 72px;
+        height: $nav-height-mobile;
         max-width: 393px;
         margin: 0 auto;
     }
@@ -23,9 +23,7 @@
     // Item
     &__item {
         flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
 
         // Modificador active
         &--active {
@@ -38,9 +36,7 @@
 
     // Link
     &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
         padding: $espaciado-sm;
         transition: $transicion;
         cursor: pointer;
@@ -72,7 +68,7 @@
     }
 
     // Tablet y Desktop
-    @media (min-width: $breakpoint-tablet) {
+    @include respond-to(tablet) {
         // Mantener fixed
         // position: relative; 
         // border-top: none;
@@ -80,7 +76,7 @@
         background-color: $blanco;
 
         &__list {
-            height: 80px;
+            height: $nav-height-tablet;
             max-width: 100%;
             justify-content: center;
             gap: $espaciado-xxl;
@@ -96,9 +92,9 @@
         }
     }
 
-    @media (min-width: $breakpoint-desktop) {
+    @include respond-to(desktop) {
         &__list {
-            height: 90px;
+            height: $nav-height-desktop;
             gap: $espaciado-xxl * 1.5;
         }
 

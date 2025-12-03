@@ -9,6 +9,7 @@ $blanco: #FFFFFF;
 $gris-claro: #F5F5F5;
 $gris-medio: #E0E0E0;
 $gris-oscuro: #666666;
+$color-error: #c41e3a;
 
 // Espaciado
 $espaciado-xs: 8px;
@@ -17,6 +18,13 @@ $espaciado-md: 24px;
 $espaciado-lg: 32px;
 $espaciado-xl: 48px;
 $espaciado-xxl: 64px;
+
+// Tamaños de componentes
+$avatar-size-sm: 44px;
+$avatar-size-md: 48px;
+$avatar-size-lg: 120px;
+$avatar-size-xl: 150px;
+$avatar-size-xxl: 180px;
 
 // Border radius
 $border-radius: 0px;
@@ -46,3 +54,8 @@ $font-weight-bold: 700;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 $breakpoint-large: 1200px;
+
+// Nav Bar Heights
+$nav-height-mobile: 72px;
+$nav-height-tablet: 80px;
+$nav-height-desktop: 90px;
